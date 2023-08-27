@@ -1,0 +1,66 @@
+# Pedido-de-casamento
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedido Especial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #FF69B4;
+        }
+
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #FF69B4;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #yes-button {
+            background-color: #4CAF50;
+        }
+
+        #no-button {
+            background-color: #FF5733;
+        }
+    </style>
+    <script>
+        function moveNoButton() {
+            const noButton = document.getElementById("no-button");
+
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 100);
+
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Um Pedido Especial</h1>
+    <p>Vida,</p>
+    <p>Desde o momento em que nos conhecemos, tenho certeza de que encontrei a pessoa com quem desejo compartilhar minha vida. Você trouxe tanta alegria e amor à minha vida, e cada momento que passamos juntos é inestimável.</p>
+    <p>Hoje, estou tomando coragem para fazer uma pergunta muito importante. Uma pergunta que só pode ser respondida com um "sim".</p>
+    <p>Perfeita, você aceitaria continuar enchendo minha vida com amor, alegria e risadas? Aceitaria ser minha parceira para sempre, como minha esposa?</p>
+    <div id="buttons">
+        <button id="yes-button" onclick="alert('Te amo mais a cada batida do meu coração!')">Sim</button>
+        <button id="no-button" onclick="moveNoButton()">Não</button>
+    </div>
+</body>
+</html>
